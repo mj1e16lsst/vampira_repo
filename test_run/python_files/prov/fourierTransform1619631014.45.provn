@@ -1,0 +1,22 @@
+document
+bundle run:bundle1
+prefix cx <xa>
+prefix var <http://openprovenance.org/var#>
+prefix u2p <http://uml2prov.org/>
+prefix urn_uuid <urn:uuid:>
+prefix run <http://example.org/>
+prefix exe <http://example.org/>
+
+entity(run:entity_simple1619631005.78_2,[prov:value = "/home/mj1e16/keplerPhotometry/kplr2009114174833_ffi-cal_TEMPLATE_PLUS5000.fits" %% cx:xb])
+used(urn_uuid:fourierTransformfafe4b61-aa29-4afd-90b3-000b8af45c27,run:entity_simple1619631005.78_2,-,[prov:role = 'u2p:imageName'])
+entity(run:entity_simple1619631005.78_5,[prov:value = "2.5" %% cx:xb])
+used(urn_uuid:fourierTransformfafe4b61-aa29-4afd-90b3-000b8af45c27,run:entity_simple1619631005.78_5,-,[prov:role = 'u2p:std'])
+activity(urn_uuid:fourierTransformfafe4b61-aa29-4afd-90b3-000b8af45c27,2021-04-28T19:30:09.000+02:00,2021-04-28T19:30:09.000+02:00,[prov:type = 'u2p:fourierTransform'])
+agent(var:lifeline,[prov:type = 'u2p:pythonCode'])
+wasAssociatedWith(urn_uuid:fourierTransformfafe4b61-aa29-4afd-90b3-000b8af45c27,var:lifeline,-)
+entity(run:entity_simple1619631005.78_4,[prov:value = "/home/mj1e16/simpleExample/keplerFFT.fits" %% cx:xb])
+wasGeneratedBy(run:entity_simple1619631005.78_4,urn_uuid:fourierTransformfafe4b61-aa29-4afd-90b3-000b8af45c27,-,[prov:role = 'u2p:fourierImageName'])
+wasDerivedFrom(run:entity_simple1619631005.78_4, run:entity_simple1619631005.78_2)
+wasDerivedFrom(run:entity_simple1619631005.78_4, run:entity_simple1619631005.78_5)
+endBundle
+endDocument

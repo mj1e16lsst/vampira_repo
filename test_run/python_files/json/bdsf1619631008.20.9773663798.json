@@ -1,0 +1,52 @@
+{
+  "var": {
+    "input0": [
+      {
+        "@id": "run:entity_simple1619631005.78_2"
+      }
+    ], 
+    "output0": [
+      {
+        "@id": "run:entity_simple1619631005.78_3"
+      }
+    ], 
+    "input0value": [
+      {
+        "@value": "/home/mj1e16/keplerPhotometry/kplr2009114174833_ffi-cal_TEMPLATE_PLUS5000.fits", 
+        "@type": "xsd:string"
+      }
+    ], 
+    "messageStartTime": [
+      {
+        "@type": "xsd:dateTime", 
+        "@value": "2021-04-28T19:30:08"
+      }
+    ], 
+    "template": [
+      "bdsf_template.provn"
+    ], 
+    "output0value": [
+      {
+        "@value": "NUMBER FLUX_BEST FLUXERR_BEST MAG_BEST MAGERR_BEST BACKGROUND  X_IMAGE  ... A_IMAGE B_IMAGE THETA_IM", 
+        "@type": "xsd:string"
+      }
+    ], 
+    "messageEndTime": [
+      {
+        "@type": "xsd:dateTime", 
+        "@value": "2021-04-28T19:30:08"
+      }
+    ], 
+    "message": [
+      {
+        "@id": "urn_uuid:bdsfbc257207-3da2-4707-924a-a232e9c112a8"
+      }
+    ]
+  }, 
+  "context": {
+    "run": "http://example.org/", 
+    "lsim": "http://example.org/", 
+    "xsd": "http://www.w3.org/2001/XMLSchema#", 
+    "urn_uuid": "urn:uuid:"
+  }
+}

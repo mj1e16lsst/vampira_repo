@@ -1,0 +1,52 @@
+{
+  "var": {
+    "input0": [
+      {
+        "@id": "run:entity_simple1619629831.29_4"
+      }
+    ], 
+    "output0": [
+      {
+        "@id": "run:entity_simple1619629831.29_6"
+      }
+    ], 
+    "input0value": [
+      {
+        "@value": "/home/mj1e16/simpleExample/keplerFFT.fits", 
+        "@type": "xsd:string"
+      }
+    ], 
+    "messageStartTime": [
+      {
+        "@type": "xsd:dateTime", 
+        "@value": "2021-04-28T19:10:34"
+      }
+    ], 
+    "template": [
+      "sextractor_template.provn"
+    ], 
+    "output0value": [
+      {
+        "@value": "NUMBER FLUX_BEST  FLUXERR_BEST MAG_BEST MAGERR_BEST BACKGROUND  X_IMAGE  ... A_IMAGE B_IMAGE THETA_I", 
+        "@type": "xsd:string"
+      }
+    ], 
+    "messageEndTime": [
+      {
+        "@type": "xsd:dateTime", 
+        "@value": "2021-04-28T19:10:34"
+      }
+    ], 
+    "message": [
+      {
+        "@id": "urn_uuid:sextractoracecf5fe-dda7-450c-8856-62242d1e268b"
+      }
+    ]
+  }, 
+  "context": {
+    "run": "http://example.org/", 
+    "lsim": "http://example.org/", 
+    "xsd": "http://www.w3.org/2001/XMLSchema#", 
+    "urn_uuid": "urn:uuid:"
+  }
+}
