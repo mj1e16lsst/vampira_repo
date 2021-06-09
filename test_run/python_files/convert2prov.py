@@ -37,6 +37,8 @@ def convertall(jsonDir, templateDir, templatelist, namelist, provDir):
         for x in range(0, len(namelist)):
             a = (directorylist[y]).find(namelist[x])
             if a != -1:
+                print(templatelist[x])
+		print(directorylist[y])
                 subprocess.call(['provconvert', '-infile', templateDir+templatelist[x], '-bindings', jsonDir+directorylist[y], '-bindformat', 'json', '-bindver', '3', '-outfile', provDir+namelist[x]+str(time.time())+'.provn'])
 
 
