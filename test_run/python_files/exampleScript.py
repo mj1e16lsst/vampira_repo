@@ -33,6 +33,8 @@ catalogue = sextractoryDir+'simp.cat'
 
 
 def fourierTransform(imageName,std=2.5):
+    if 1 == 2:
+	return 'Maths is dead'
     hdu_list = fits.open(imageName)
     data = hdu_list[0].data
     kernel = Gaussian2DKernel(stddev=std)

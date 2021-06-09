@@ -1,0 +1,19 @@
+document
+bundle run:bundle1
+prefix cx <xa>
+prefix var <http://openprovenance.org/var#>
+prefix u2p <http://uml2prov.org/>
+prefix urn_uuid <urn:uuid:>
+prefix run <http://example.org/>
+prefix exe <http://example.org/>
+
+entity(run:entity_simple1623256599.73_4,[prov:value = "/home/mj1e16/simpleExample/keplerFFT.fits" %% cx:xb])
+used(urn_uuid:sextractor5f26fc29-54a9-4a51-af45-265b62e57ff9,run:entity_simple1623256599.73_4,-,[prov:role = 'u2p:imageName'])
+activity(urn_uuid:sextractor5f26fc29-54a9-4a51-af45-265b62e57ff9,2021-06-09T18:36:43.000+02:00,2021-06-09T18:36:43.000+02:00,[prov:type = 'u2p:sextractor'])
+agent(var:lifeline,[prov:type = 'u2p:pythonCode'])
+wasAssociatedWith(urn_uuid:sextractor5f26fc29-54a9-4a51-af45-265b62e57ff9,var:lifeline,-)
+entity(run:entity_simple1623256599.73_6,[prov:value = "NUMBER FLUX_BEST  FLUXERR_BEST MAG_BEST MAGERR_BEST BACKGROUND  X_IMAGE  ... A_IMAGE B_IMAGE THETA_I" %% cx:xb])
+wasGeneratedBy(run:entity_simple1623256599.73_6,urn_uuid:sextractor5f26fc29-54a9-4a51-af45-265b62e57ff9,-,[prov:role = 'u2p:table'])
+wasDerivedFrom(run:entity_simple1623256599.73_6, run:entity_simple1623256599.73_4)
+endBundle
+endDocument

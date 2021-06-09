@@ -21,7 +21,7 @@ def generateLists(templateDir):
                 
     namelist = []
     for x in range(len(templatelist)):
-        loc = templatelist[x].find('_')
+        loc = templatelist[x].find('_template.provn')
         if loc !=0:
             namelist.append(templatelist[x][0:loc])
 

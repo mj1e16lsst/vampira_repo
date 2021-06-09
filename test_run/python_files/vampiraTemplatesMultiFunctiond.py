@@ -79,15 +79,14 @@ def variableSeparation(inString):
         else:
             inputList = [inputList]
 
-	#for outLen in range(len(loc4s)):
-        #outputList = searchString[loc4s[outLen]+len(find4):loc5s[outLen]]
-        outputList = searchString[loc4s[-1]+len(find4):loc5s[-1]]
-	if ',' in outputList:
-            outputList = separateLists(outputList)
-        else:
-            outputList = [outputList]
+	for outLen in range(len(loc4s)):
+            outputList = searchString[loc4s[outLen]+len(find4):loc5s[outLen]]
+            if ',' in outputList:
+                outputList = separateLists(outputList)
+            else:
+                outputList = [outputList]
         
-        functionDict['funct_{0}'.format(fNum)] = [functName,inputList,outputList]
+            functionDict['funct_{0}_{1}'.format(fNum,outLen)] = [functName,inputList,outputList]
     return functionDict
 
 

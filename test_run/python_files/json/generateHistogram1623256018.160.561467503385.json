@@ -1,0 +1,63 @@
+{
+  "var": {
+    "input0": [
+      {
+        "@id": "run:entity_simple1623256007.45_7"
+      }
+    ], 
+    "input1": [
+      {
+        "@id": "run:entity_simple1623256007.45_11"
+      }
+    ], 
+    "input1value": [
+      {
+        "@value": "bdsf_fft_hist.png", 
+        "@type": "xsd:string"
+      }
+    ], 
+    "output0": [
+      {
+        "@id": "run:entity_simple1623256007.45_11"
+      }
+    ], 
+    "input0value": [
+      {
+        "@value": "NUMBER FLUX_BEST  FLUXERR_BEST MAG_BEST MAGERR_BEST BACKGROUND  X_IMAGE  ... A_IMAGE B_IMAGE THETA_I", 
+        "@type": "xsd:string"
+      }
+    ], 
+    "messageStartTime": [
+      {
+        "@type": "xsd:dateTime", 
+        "@value": "2021-06-09T18:26:58"
+      }
+    ], 
+    "template": [
+      "generateHistogram_template.provn"
+    ], 
+    "output0value": [
+      {
+        "@value": "bdsf_fft_hist.png", 
+        "@type": "xsd:string"
+      }
+    ], 
+    "messageEndTime": [
+      {
+        "@type": "xsd:dateTime", 
+        "@value": "2021-06-09T18:26:58"
+      }
+    ], 
+    "message": [
+      {
+        "@id": "urn_uuid:generateHistogram13c9eb55-429d-48c2-b2a5-15145c8abcb1"
+      }
+    ]
+  }, 
+  "context": {
+    "run": "http://example.org/", 
+    "lsim": "http://example.org/", 
+    "xsd": "http://www.w3.org/2001/XMLSchema#", 
+    "urn_uuid": "urn:uuid:"
+  }
+}

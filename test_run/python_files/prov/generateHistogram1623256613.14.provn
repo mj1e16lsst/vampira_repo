@@ -1,0 +1,22 @@
+document
+bundle run:bundle1
+prefix cx <xa>
+prefix var <http://openprovenance.org/var#>
+prefix u2p <http://uml2prov.org/>
+prefix urn_uuid <urn:uuid:>
+prefix run <http://example.org/>
+prefix exe <http://example.org/>
+
+entity(run:entity_simple1623256599.73_3,[prov:value = "NUMBER FLUX_BEST FLUXERR_BEST MAG_BEST MAGERR_BEST BACKGROUND  X_IMAGE  ... A_IMAGE B_IMAGE THETA_IM" %% cx:xb])
+used(urn_uuid:generateHistogram0a6fbbbb-81f5-4451-aed4-20ac7761d34d,run:entity_simple1623256599.73_3,-,[prov:role = 'u2p:table'])
+entity(run:entity_simple1623256599.73_9,[prov:value = "bdsf_hist.png" %% cx:xb])
+used(urn_uuid:generateHistogram0a6fbbbb-81f5-4451-aed4-20ac7761d34d,run:entity_simple1623256599.73_9,-,[prov:role = 'u2p:histogramName'])
+activity(urn_uuid:generateHistogram0a6fbbbb-81f5-4451-aed4-20ac7761d34d,2021-06-09T18:36:47.000+02:00,2021-06-09T18:36:47.000+02:00,[prov:type = 'u2p:generateHistogram'])
+agent(var:lifeline,[prov:type = 'u2p:pythonCode'])
+wasAssociatedWith(urn_uuid:generateHistogram0a6fbbbb-81f5-4451-aed4-20ac7761d34d,var:lifeline,-)
+entity(run:entity_simple1623256599.73_9,[prov:value = "bdsf_hist.png" %% cx:xb])
+wasGeneratedBy(run:entity_simple1623256599.73_9,urn_uuid:generateHistogram0a6fbbbb-81f5-4451-aed4-20ac7761d34d,-,[prov:role = 'u2p:histogramName'])
+wasDerivedFrom(run:entity_simple1623256599.73_9, run:entity_simple1623256599.73_3)
+wasDerivedFrom(run:entity_simple1623256599.73_9, run:entity_simple1623256599.73_9)
+endBundle
+endDocument

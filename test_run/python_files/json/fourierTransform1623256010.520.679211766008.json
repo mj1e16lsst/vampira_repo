@@ -1,0 +1,63 @@
+{
+  "var": {
+    "input0": [
+      {
+        "@id": "run:entity_simple1623256007.45_2"
+      }
+    ], 
+    "input1": [
+      {
+        "@id": "run:entity_simple1623256007.45_5"
+      }
+    ], 
+    "input1value": [
+      {
+        "@value": "2.5", 
+        "@type": "xsd:string"
+      }
+    ], 
+    "output0": [
+      {
+        "@id": "run:entity_simple1623256007.45_4"
+      }
+    ], 
+    "input0value": [
+      {
+        "@value": "/home/mj1e16/keplerPhotometry/kplr2009114174833_ffi-cal_TEMPLATE_PLUS5000.fits", 
+        "@type": "xsd:string"
+      }
+    ], 
+    "messageStartTime": [
+      {
+        "@type": "xsd:dateTime", 
+        "@value": "2021-06-09T18:26:50"
+      }
+    ], 
+    "template": [
+      "fourierTransform_template.provn"
+    ], 
+    "output0value": [
+      {
+        "@value": "/home/mj1e16/simpleExample/keplerFFT.fits", 
+        "@type": "xsd:string"
+      }
+    ], 
+    "messageEndTime": [
+      {
+        "@type": "xsd:dateTime", 
+        "@value": "2021-06-09T18:26:50"
+      }
+    ], 
+    "message": [
+      {
+        "@id": "urn_uuid:fourierTransformb5085931-8a3c-4bc6-a2e7-fda1576c05bc"
+      }
+    ]
+  }, 
+  "context": {
+    "run": "http://example.org/", 
+    "lsim": "http://example.org/", 
+    "xsd": "http://www.w3.org/2001/XMLSchema#", 
+    "urn_uuid": "urn:uuid:"
+  }
+}
