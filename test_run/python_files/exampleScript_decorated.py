@@ -13,6 +13,7 @@ import genBindings
 from astropy.io import fits
 from astropy.table import Table
 import matplotlib.pyplot as plt
+genBindings.decorate_all_in_module(plt,genBindings.provWrap)
 
 from astropy.convolution import Gaussian2DKernel,convolve_fft
 #import bdsf

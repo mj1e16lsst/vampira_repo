@@ -17,9 +17,9 @@ import sys
 
 import convert2prov
 import decorate
-import genBindings
+#import genBindings
 import vampiraTemplates
-
+import moduleList
 
 # In[4]:
 
@@ -43,20 +43,36 @@ exampleScript = sys.argv[1]
 with open(exampleScript,'r') as f:
     script = f.read()
 
+
+
 example_sep = vampiraTemplates.variableSeparation(script)
-
-
+#outputLengths = [len(x[2]) for x in example_sep.values()]
+tot_sep_dict = {x[0]:[x[1],x[2]] for x in example_sep.values()}
 # In[7]:
 
 for key in example_sep.keys():
-    bundle = vampiraTemplates.generateBundle(example_sep[key],vampiraTemplates.bundleStart,vampiraTemplates.bundleEnd)
-    with open(currentDir+'/templates/{}_template.provn'.format(example_sep[key][0]),'w') as f:
+    noSpecial = [''.join(e for e in string if e.isalnum() or e is '_') for string in example_sep[key]]
+    bundle = vampiraTemplates.generateBundle(noSpecial,vampiraTemplates.bundleStart,vampiraTemplates.bundleEnd)
+    with open(currentDir+'/templates/{}_template.provn'.format(noSpecial[0]),'w') as f:
         f.write(bundle)
 
+modLocs = moduleList.moduleLocations
 
+for mod in modLocs:
+    with open(mod,'r') as f:
+        exDat = f.read()
+    example_sep = vampiraTemplates.variableSeparation(exDat)
+    tot_sep_dict.update({x[0]:[x[1],x[2]] for x in example_sep.values()}) # functions with the same name may try to overwrite, possible future bug
+    for key in example_sep.keys():
+        noSpecial = [''.join(e for e in string if e.isalnum() or e is '_') for string in example_sep[key]]
+        bundle = vampiraTemplates.generateBundle(noSpecial,vampiraTemplates.bundleStart,vampiraTemplates.bundleEnd)
+        with open(currentDir+'/templates/{}_template.provn'.format(noSpecial[0]),'w') as f:
+            f.write(bundle)
 # In[8]:
+with open(currentDir+'/templateDictionary.py','w') as f:
+    f.write('tempDict = {}'.format(tot_sep_dict))
 
-newName = decorate.decorateFile(exampleScript)
+newName = decorate.decorateFile(exampleScript,modules=moduleList.modules)
 
 
 # In[9]:

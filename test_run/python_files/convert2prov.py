@@ -11,14 +11,14 @@ import time
 
 def generateLists(templateDir):
     templatelistextra = os.listdir(templateDir)
-    
+
     templatelist = []
     for x in range(len(templatelistextra)):
         a = templatelistextra[x].find('.')
         if a !=0:
             if '.provn' in templatelistextra[x]:
                 templatelist.append(templatelistextra[x])
-                
+
     namelist = []
     for x in range(len(templatelist)):
         loc = templatelist[x].find('_template.provn')
@@ -33,7 +33,7 @@ def generateLists(templateDir):
 
 def convertall(jsonDir, templateDir, templatelist, namelist, provDir):
     directorylist = os.listdir(jsonDir)
-    for y in range(0, len(directorylist)):    
+    for y in range(0, len(directorylist)):
         for x in range(0, len(namelist)):
             a = (directorylist[y]).find(namelist[x])
             if a != -1:

@@ -2,55 +2,55 @@
   "var": {
     "input0": [
       {
-        "@id": "run:entity_simple1623256007.45_3"
+        "@id": "run:entity_simple1624377936.84_341"
       }
     ], 
     "input1": [
       {
-        "@id": "run:entity_simple1623256007.45_9"
+        "@id": "run:entity_simple1624377936.84_16"
       }
     ], 
     "input1value": [
       {
-        "@value": "bdsf_hist.png", 
+        "@value": "True", 
         "@type": "xsd:string"
       }
     ], 
     "output0": [
       {
-        "@id": "run:entity_simple1623256007.45_9"
+        "@id": "run:entity_simple1624377936.84_762"
       }
     ], 
     "input0value": [
       {
-        "@value": "NUMBER FLUX_BEST FLUXERR_BEST MAG_BEST MAGERR_BEST BACKGROUND  X_IMAGE  ... A_IMAGE B_IMAGE THETA_IM", 
+        "@value": "Figure(640x480)", 
         "@type": "xsd:string"
       }
     ], 
     "messageStartTime": [
       {
         "@type": "xsd:dateTime", 
-        "@value": "2021-06-09T18:26:56"
+        "@value": "2021-06-22T18:05:44"
       }
     ], 
     "template": [
-      "generateHistogram_template.provn"
+      "_auto_draw_if_interactive_template.provn"
     ], 
     "output0value": [
       {
-        "@value": "bdsf_hist.png", 
+        "@value": "None", 
         "@type": "xsd:string"
       }
     ], 
     "messageEndTime": [
       {
         "@type": "xsd:dateTime", 
-        "@value": "2021-06-09T18:26:56"
+        "@value": "2021-06-22T18:05:44"
       }
     ], 
     "message": [
       {
-        "@id": "urn_uuid:generateHistogram917091a8-2f39-4996-9c10-020f7fe303d1"
+        "@id": "urn_uuid:_auto_draw_if_interactivee4137df2-b0c1-4bfa-80bb-618d0a2abe7f"
       }
     ]
   }, 

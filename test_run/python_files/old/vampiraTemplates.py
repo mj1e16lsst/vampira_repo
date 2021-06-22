@@ -1,3 +1,9 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[1]:
+
+
 import re
 import sys
 
@@ -48,19 +54,16 @@ def variableSeparation(inString):
     functionDict = {}
     
     functionLocs = find(inString,find1)
-    #print(len(functionLocs))
     functionLocs.append(len(inString))
     
     for fNum in range(len(functionLocs)-1):
-        #print(fNum)
+        
         searchString = inString[functionLocs[fNum]:functionLocs[fNum+1]]
-        #print(searchString)
-	#print('#########################################')
-	loc2 = searchString.index(find2)
+        loc2 = searchString.index(find2)
         loc3 = searchString.index(find3)
 	
 	try:
-            loc4 = searchString.index(find4)
+            #loc4 = searchString.index(find4)
 	    loc4s = find(searchString,find4)
 	except:
 	    continue
@@ -171,4 +174,8 @@ def generateBundle(function,bundleStart,bundleEnd):
     bundle = '\n'.join(bundleList)
     
     return bundle
+
+
+
+
 

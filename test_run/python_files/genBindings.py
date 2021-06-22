@@ -17,7 +17,7 @@ import inspect
 import types
 import functools
 import sys
-
+import templateDictionary
 # In[2]:
 
 
@@ -77,20 +77,37 @@ def gen_identifier(variable, naming_template="entity"):
 
 # In[8]:
 
-
 def provcall(inlist, outlist, template, longname,jsonDir='./'):
+    inlist = [str(x).replace('*','') for x in inlist]
+    outlist = [str(x).replace('*','') for x in outlist]
     identifier = uuid.uuid4()
     bindings['var'] = {}
     bindings['var']['messageStartTime'] = [ {"@type": "xsd:dateTime", "@value": datetimestamp()} ] # change to date time
     bindings['var']['template'] = [template]
     bindings['var']['message'] = [ {"@id": "urn_uuid:"+str(longname)+str(identifier) } ] # is this right? rm str(longname) if you broke it
+    print(longname,'longname')
+    #print(templateDictionary.tempDict.keys())
+    # janky way to always match template and binding in/out size
+    if longname in templateDictionary.tempDict:
+        if len(outlist) < len(templateDictionary.tempDict[longname][1]):
+            print('mismatch lengths')
+            lenDiff = len(templateDictionary.tempDict[longname][1]) - len(outlist)
+            for extra in range(lenDiff):
+                outlist.append('Not Computed')
+        if len(inlist) < len(templateDictionary.tempDict[longname][0]):
+            print('mismatch input')
+            lenDiff = len(templateDictionary.tempDict[longname][0]) - len(inlist)
+            for extra in range(lenDiff):
+                inlist.append('Not Computed')
+
     for X in range(len(outlist)):
         outVal = str(outlist[X])
         if len(outVal) > 100:
             outVal = str(outlist[X])[0:100]
         bindings['var']['output'+str(X)] = [ {"@id": "run:"+gen_identifier(outlist[X])} ] # added value, remove if broken
         bindings['var']['output'+str(X)+'value'] = [ {"@value": outVal,"@type":"xsd:string"} ]  
-    for X in range(len(inlist)):       
+
+    for X in range(len(inlist)):
         inVal = str(inlist[X])
         if len(inVal) > 100:
             inVal = str(inlist[X])[0:100]        

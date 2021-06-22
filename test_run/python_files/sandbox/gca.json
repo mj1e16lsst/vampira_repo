@@ -2,44 +2,44 @@
   "var": {
     "input0": [
       {
-        "@id": "run:entity_simple1623256599.73_4"
+        "@id": "run:entity_simple1624295363.95_8"
       }
     ], 
     "output0": [
       {
-        "@id": "run:entity_simple1623256599.73_6"
+        "@id": "run:entity_simple1624295363.95_21"
       }
     ], 
     "input0value": [
       {
-        "@value": "/home/mj1e16/simpleExample/keplerFFT.fits", 
+        "@value": "Not Computed", 
         "@type": "xsd:string"
       }
     ], 
     "messageStartTime": [
       {
         "@type": "xsd:dateTime", 
-        "@value": "2021-06-09T18:36:43"
+        "@value": "2021-06-21T19:09:27"
       }
     ], 
     "template": [
-      "sextractor_template.provn"
+      "gca_template.provn"
     ], 
     "output0value": [
       {
-        "@value": "NUMBER FLUX_BEST  FLUXERR_BEST MAG_BEST MAGERR_BEST BACKGROUND  X_IMAGE  ... A_IMAGE B_IMAGE THETA_I", 
+        "@value": "AxesSubplot(0.125,0.11;0.775x0.77)", 
         "@type": "xsd:string"
       }
     ], 
     "messageEndTime": [
       {
         "@type": "xsd:dateTime", 
-        "@value": "2021-06-09T18:36:43"
+        "@value": "2021-06-21T19:09:27"
       }
     ], 
     "message": [
       {
-        "@id": "urn_uuid:sextractor5f26fc29-54a9-4a51-af45-265b62e57ff9"
+        "@id": "urn_uuid:gcabc6d20d6-30b7-44a1-b64c-d62240cefcf0"
       }
     ]
   }, 

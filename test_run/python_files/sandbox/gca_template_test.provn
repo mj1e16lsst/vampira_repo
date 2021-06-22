@@ -9,16 +9,16 @@ prefix u2p <http://uml2prov.org/>
 bundle exe:bundle1
 
         entity(var:input0, [prov:value = 'var:input0value'])
-        used(var:message, var:input0, -, [prov:role='u2p:imageName'])
+        used(var:message, var:input0, -, [prov:role='u2p:kwargs'])
 
-    activity(var:message, [prov:type = 'u2p:sextractor', tmpl:startTime = 'var:messageStartTime', tmpl:endTime ='var:messageEndTime' ])
+    activity(var:message, [prov:type = 'u2p:gca', tmpl:startTime = 'var:messageStartTime', tmpl:endTime ='var:messageEndTime' ])
     agent(var:lifeline, [prov:type='u2p:pythonCode'])
     
     wasAssociatedWith(var:message, var:lifeline, - , [])
     
 
         entity(var:output0, [prov:value = 'var:output0value'])
-        wasGeneratedBy(var:output0, var:message, -, [prov:role='u2p:table'])
+        wasGeneratedBy(var:output0, var:message, -, [prov:role='u2p:kwar___gs'])
             wasDerivedFrom(var:output0, var:input0)
 
 endBundle

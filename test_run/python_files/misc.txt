@@ -1,0 +1,11 @@
+                with open(jsonDir+directorylist[y],'r') as f:
+                    data = f.read()
+                outputLenJson = 0
+                outputFinder = 0
+                while outputFinder != 0:
+                    locString = '"output{}": ['.format(outputLenJson)
+                    outputFinder = data.index(locString)
+                    outputLenJson += 1
+                if outputLenJson != outLengths:
+
+
